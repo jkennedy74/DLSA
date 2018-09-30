@@ -20,21 +20,22 @@ def index():
     """Return the homepage."""
     return render_template("index.html")
 
-# @app.route('/', methods=['GET', 'POST'])
-# def upload_file():
-#     data = {"success": False}
-#     if request.method == 'POST':
-#         if request.files.get('file'):
-#             # read the file
-#             file = request.files['file']
 
-#             # read the filename
-#             filename = file.filename
+@app.route('/', methods=['GET', 'POST'])
+def upload_file():
+    data = {"success": False}
+    if request.method == 'POST':
+        if request.files.get('file'):
+            # read the file
+            file = request.files['file']
 
-#             # create a path to the uploads folder
-#             filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            # read the filename
+            filename = file.filename
 
-#             file.save(filepath)
+            # create a path to the uploads folder
+            filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+
+            file.save(filepath)
 
 
 if __name__ == "__main__":

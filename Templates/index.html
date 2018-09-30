@@ -31,7 +31,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">OTP Needs a Name</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Deep Learning and Sentiment Analysis</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
@@ -39,84 +39,135 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#content">Project Description</a>
+              <a class="nav-link js-scroll-trigger" href="#project">Project Description</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#modelslist">Models</a>
+              <a class="nav-link js-scroll-trigger" href="#concepts">Deep Learning</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#technologies">Acknowledgements</a>
+              <a class="nav-link js-scroll-trigger" href="#models">Pretrained Models</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <header class="masthead" id = "content">
+    <header class="masthead" id = "project">
       <div class="container h-100">
         <div class="row h-100">
           <div class="col-lg-7 my-auto">
             <div class="header-content mx-auto">
-              <h1 class="mb-5">Can a Machine Learn Sentiment?</h1>
+              <h2 class="mb-5">Can a Machine Learn Sentiment?</h2>
               <p></p>
             </div>
           </div>
           <div class="col-lg-5 my-auto">
-          <div class="custom-file">
-  <input type="file" class="custom-file-input" id="LoadFile">
-  <label class="custom-file-label" for="customFile">Choose file</label>
+<fieldset>
+  
+  <div class="form-group">
+    <div class="input-group mb-3">
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="file">
+        <label class="custom-file-label" for="file">Upload Seed File</label>
+      </div>
+      <div class="input-group-append">
+        <span class="input-group-text" id="">Upload</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="custom-control custom-radio">
+      <input type="radio" id="hgwells" name="customRadio" class="custom-control-input" checked="">
+      <label class="custom-control-label" for="hgwells">HG Wells</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="trump" name="customRadio" class="custom-control-input">
+      <label class="custom-control-label" for="trump">POTUS</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="homer" name="customRadio" class="custom-control-input">
+      <label class="custom-control-label" for="homer">Homer</label>
+    </div>
+  </div>
+</fieldset>
+
+
+
+
 </div>
          </div>
         </div>
       </div>
     </header>
 
-    <section class="download bg-primary text-center" id="content">
+    <section class="download bg-primary text-center" id="concepts">
       <div class="container">
         <div class="row">
           <div class="col-md-8 mx-auto">
-            <h2 class="section-heading">Concepts</h2>
-                      <ul>
-          <li>Deep Learning</li>
-          <li>LSTM</li>
-          <li>Sentiment Analysis</li>
-          </ul>
-          </div>
+          <h3>Deep Learning and Neural Networks</h3>
+          <p>Neural networks are biologically-inspired programming paradigms which enable a computer to learn from observational data.</p>
+          <p>Deep learning is a set of techniques for learning in neural networks</p>
+                      </div>
         </div>
       </div>
     </section>
 
-    <section class="features" id="technologies">
+    <section class="features" id="models">
       <div class="container">
         <div class="section-heading text-center">
-          <h2>Technologies Used</h2>
-                    <ul>
-          <li>Keras TensorFlow</li>
-          <li>Flask</li>
-          <li>Stanford CoreNLP</li>
-          <li>D3</li>
-          <li>Plotly</li>
-          </ul>
-          <p class="text-muted">Some blurb here about DL and  NLP!</p>
+        <h3>LSTM RNN</h3>
+          <p class="text-muted">Long Short-Term Memory and Recursive Neural Network!</p>
+          <p class="text-muted">Why did we use these!</p>
+
+
           <hr>
         </div>
        </div>
     </section>
 
+     <nav class="navbar navbar-expand-lg navbar-light fixed-bottom">
+    <a class="navbar-brand" href="#">Resources</a>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/jkennedy74/DLSA">Project Repository</a>
+        </li>
+      </ul>
+      <div class="btn-group dropup">
+        <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          JS and Python Libraries
+        </button>
+        <div class="dropdown-menu">
+          <div class="dropdown-item-text text-dark">JavaScript</div>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-item-text text-dark">Python</div>
+          <a class="dropdown-item" href="https://keras.io/" target="blank">Keras</a>
+          <a class="dropdown-item" href="https://stanfordnlp.github.io/CoreNLP/api.html" target="blank">Stanford CoreNLP</a>
+          <a class="dropdown-item" href="https://flask-mysqldb.readthedocs.io/en/latest/" target="blank">Flask-MySQLdb</a>
+          <a class="dropdown-item" href="https://github.com/bear/python-twitter" target="blank">Python-Twitter</a>
+        </div>
+      </div>
+
+      <div class="btn-group dropup">
+        <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Data Sources      
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="http://twitter.com" target="blank">Twitter</a>
+          <a class="dropdown-item" href="https://www.gutenberg.org/" target="blank">Project Gutenburg</a>
+        </div>
+      </div>
+
+
+    </div>
+  </nav>
+
+
        <footer>
       <div class="container">
-        <p>&copy; Who are we???? 2018. All Rights Reserved.</p>
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a href="#">Privacy</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">Terms</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">FAQ</a>
-          </li>
-        </ul>
+        <p>&copy; Brian Schwierzke, Juliana Kennedy, Phil Silberman, Michael Stewart 2018. All Rights Reserved.</p>
       </div>
     </footer>
 

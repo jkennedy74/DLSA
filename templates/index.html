@@ -36,14 +36,15 @@
                         <a class="nav-link js-scroll-trigger" href="#project">Project Description</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#ModelModal">Pretrained Models</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#concepts">Deep Learning</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#models">Pretrained Models</a>
+                        <a class="nav-link js-scroll-trigger" href="#models">Sentiment Analysis</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#ModelModal">Pretrained Models</a>
-                    </li>
+
                 </ul>
             </div>
         </div>
@@ -70,19 +71,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto">
-                    <h3>LSTM Networks</h3>
-                    Recurrent Neural Networks (RNNs) are useful with sequential data because each neuron or unit can use its internal memory to maintain information about the previous input. This is important to note because reading through a sentence even as a human, you’re picking up the context of each word from the words before it.
-                    A recurrent neural network can be thought of as multiple copies of the same network, each passing a message to a successor.  RNNs to a variety of problems: speech recognition, language modeling, translation, image captioning… 
-
-                    The problem with RNNs is how they handle long-term dependencies.  If the gap between the relevant information and the place that it’s needed is small, RNNs can learn to use the past information.
-                    However as the gap between the relevant information and the point that it is needed grows, RNNs become unable to learn to connect the information.
-                    
-                    Long Short Term Memory networks (LSTMs) are a special kind of RNN capable of learning long-term dependencies.  
-
-                    All RNNs have a chain like structure.  LSTMs do as well but the repeating module has a different structure. Instead of having a single neural network layer, there are four 
-
-                    
-
+                    <h3>LSTM Networks</h3> Recurrent Neural Networks (RNNs) are useful with sequential data because each neuron or unit can use its internal memory to maintain information about the previous input. This is important to note because reading through a sentence even as a human, you’re picking up the context of each word from the words before it. A recurrent neural network can be thought of as multiple copies of the same network, each passing a message to a successor. RNNs to a variety of problems: speech recognition, language modeling, translation, image captioning… The problem with RNNs is how they handle long-term dependencies. If the gap between the relevant information and the place that it’s needed is small, RNNs can learn to use the past information. However as the gap between the relevant information and the point that it is needed grows, RNNs become unable to learn to connect the information. Long Short Term Memory networks (LSTMs) are a special kind of RNN capable of learning long-term dependencies. All RNNs have a chain like structure. LSTMs do as well but the repeating module has a different structure. Instead of having a single neural network layer, there are four
 
                 </div>
             </div>

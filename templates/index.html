@@ -141,33 +141,15 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <fieldset class="form-group">
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios" id="Seuss" value="option1" checked=""> Dr. Seuss
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios" id="POTUS" value="option2"> @RealDonaldTrump
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios" id="Illiad" value="option3"> Homer
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="optionsRadios" id="TimeMachine" value="option4"> HG Wells
-                            </label>
-                        </div>
-                    </fieldset>
+                    <form name="myForm" action="/corpus" method="post">
+                        <fieldset class="form-group">
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="Seuss" value="option1">Dr. Seuss</input><br>
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="POTUS" value="option2">@RealDonaldTrump</input><br>
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="Illiad" value="option3">Homer</input><br>
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="TimeMachine" value="option4">HG Wells</input><br>
+                            <input type="submit" class="btn-primary btn-lg btn-block" value="Signup"></input>
+                        </fieldset>
                     </form>
-
-                    <div class="modal-footer">
-                        <button type="submit" class="btn-primary btn-lg btn-block" data-dismiss="modal" id="reset">Submit</button>
-                    </div>
                 </div>
             </div>
         </div>

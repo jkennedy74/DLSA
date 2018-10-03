@@ -21,6 +21,7 @@ app = Flask(__name__)
 # empty list to capture filename to use for analysis
 predicted_text = []
 seed = []
+sample_text = []
 raw_sentiment = []
 pred_sentiment = []
 
@@ -36,9 +37,15 @@ def corpus():
     option = request.form['optionsRadios']
     print("The corpus chosen is '" + option + "'")
 
+    if option == 'option1':
+        filepath = os.path.join('data','text', 'seuss.txt')
+        modelname = os.path.join('data', 'weights', 'checkpoint-22-0.8293-seuss.hdf5')
     if option == 'option2':
         filepath = os.path.join('data','text', 'trump.txt')
         modelname = os.path.join('data', 'weights', 'checkpoint-10-1.6465-trump.hdf5')
+    if option == 'option3':
+        filepath = os.path.join('data','text', 'illiad.txt')
+        modelname = os.path.join('data', 'weights', 'needacheckpointfile.hdf5')
     if option == 'option4':
         filepath = os.path.join('data','text', 'timemachine.txt')
         modelname = os.path.join('data', 'weights', 'checkpoint--49-1.4686-timemachine.hdf5')
@@ -118,20 +125,26 @@ def corpus():
     result1 = analyzer.polarity_scores(raw_sent)
     result2 = analyzer.polarity_scores(pred_sent)
 
+    sample_text.append(raw_sent)
     raw_sentiment.append(result1)
     pred_sentiment.append(result2)
 
     return redirect('/')
 
+@app.route("/sample_text")
+def sample():
+
+    return jsonify(sample_text)
+
 @app.route("/lstm_output")
 def rnn():
 
-    return ''.join(predicted_text)
+    return jsonify(''.join(predicted_text))
 
 @app.route("/seed")
 def rand_seed():
 
-    return ''.join(seed)
+    return jsonify(''.join(seed))
 
 @app.route("/raw_result")
 def seeds():

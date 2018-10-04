@@ -61,12 +61,12 @@
         <div class="container h-100">
             <div class="row h-100">
                 <div class="row">
-   
+
 
                     <div class="col-lg-12 my-auto">
-                            <div class="section-heading text-center">
-                                    <h1>Recurrent Neural Networks (RNNs)</h1>
-                                </div>
+                        <div class="section-heading text-center">
+                            <h1>Recurrent Neural Networks (RNNs)</h1>
+                        </div>
                         <div class="row">
 
                             <div class="col-md-12">
@@ -180,7 +180,7 @@
                             <!-- We append our prediction here. -->
                             <p class="card-text" id="predictedText"></p>
                         </div>
-                        <button id="predict" type="submit" class="btn-dark">Load Prediction</button>    
+                        <button id="predict" type="submit" class="btn-dark">Predict</button>
 
                     </div>
                 </div>
@@ -216,7 +216,8 @@
                         <!-- We append our random seed here. -->
                         <p class="card-text" id="predictSentiment"></p>
                     </div>
-                    <button id="sentiment" type="submit" class="btn-dark">Generate Sentiment</button>
+                    <button id="sentiment" type="submit" class="btn-dark">Analyze</button>
+
 
 
                 </div>
@@ -227,14 +228,14 @@
 
     <section class="features " id="data">
         <div class="container">
-                <div class="section-heading text-center">
-                        <h3>Explore the Data</h3>
-                    </div>
+            <div class="section-heading text-center">
+                <h3>Explore the Data</h3>
+            </div>
             <div class="row">
 
 
                 <!-- Embed Tableau -->
-                <div class="embed-responsive embed-responsive-16by9" > 
+                <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="https://public.tableau.com/shared/KJRQGK7Y4?:display_count=no&:showVizHome=no"
                         allowfullscreen></iframe>
                 </div>
@@ -289,53 +290,61 @@
 
     <!-- Modal -->
     <div class="modal fade" id="ModelModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="ModalLable">Select a Corpus</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form name="myForm" action="/corpus" method="post">
-                            <fieldset class="form-group">
-                                <ul>
-                                <input type="radio" class="form-check-input" name="optionsRadios" id="Seuss" value="option1">Dr. Seuss</input><br>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title " id="ModalLable">Select a Corpus</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-dialog">Select a corpus, load the prediction, and analyze the sentiment.</div>
+                <div class="modal-body">
+                    <form name="myForm" action="/corpus" method="post">
+                        <fieldset class="form-group">
+                            <ul>
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="Seuss" value="option1">Dr.
+                                Seuss</input><br>
                                 <input type="radio" class="form-check-input" name="optionsRadios" id="POTUS" value="option2">@RealDonaldTrump</input><br>
                                 <input type="radio" class="form-check-input" name="optionsRadios" id="Illiad" value="option3">Homer</input><br>
-                                <input type="radio" class="form-check-input" name="optionsRadios" id="TimeMachine" value="option4">HG Wells</input><br>
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="TimeMachine"
+                                    value="option4">HG Wells</input><br>
                             </ul>
-                            <input type="reset" class="btn-dark" value="Reset Selection"></input>
-                            <input type="submit" class="btn-dark" value="Select Corpus"></input>
+                            <div class="btn-group" role="group" aria-label="Basic example">
 
-                            </fieldset> </div>
-                        </form>
-                    </div>
+                                <input type="reset" class=" btn-dark" value="Reset"></input>
+                                <input type="submit" class="btn-dark" value="Select Corpus"></input>
+                            </div>
+                        </fieldset>
                 </div>
+                </form>
             </div>
-        <!-- End Modal -->
+        </div>
+    </div>
+    <!-- End Modal -->
 
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <p>&copy; Brian Schwierzke, Juliana Kennedy, Phil Silberman, Michael Stewart 2018. All Rights Reserved.</p>
-            </div>
-        </footer>
-        <!-- End Footer -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; Brian Schwierzke, Juliana Kennedy, Phil Silberman, Michael Stewart 2018. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- End Footer -->
 
-        <!-- Bootstrap core JavaScript -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 
-        <!-- Plugin JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
-        <script src="../static/js/main.min.js"></script>
+    <script src="../static/js/main.min.js"></script>
+    <script src="../static/js/app.js"></script>
+
 
 </body>
 

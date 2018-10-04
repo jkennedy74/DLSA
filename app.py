@@ -33,6 +33,9 @@ def index():
 
 @app.route('/corpus', methods = ['POST'])
 def corpus():
+    # Initiate Paths JK and updated Trump to TrumpSmall
+    filepath = ''
+    modelname = ''
 
     option = request.form['optionsRadios']
     print("The corpus chosen is '" + option + "'")
@@ -41,8 +44,8 @@ def corpus():
         filepath = os.path.join('data','text', 'seuss.txt')
         modelname = os.path.join('data', 'weights', 'checkpoint-22-0.8293-seuss.hdf5')
     if option == 'option2':
-        filepath = os.path.join('data','text', 'trump.txt')
-        modelname = os.path.join('data', 'weights', 'checkpoint-10-1.6465-trump.hdf5')
+        filepath = os.path.join('data','text', 'trumpsmall.txt')
+        modelname = os.path.join('data', 'weights', 'checkpoint-03-1.8313-trumpsmall.hdf5')
     if option == 'option3':
         filepath = os.path.join('data','text', 'illiad.txt')
         modelname = os.path.join('data', 'weights', 'needacheckpointfile.hdf5')
@@ -129,7 +132,7 @@ def corpus():
     raw_sentiment.append(result1)
     pred_sentiment.append(result2)
 
-    return redirect('/')
+    return redirect('/#modelExploration')
 
 @app.route("/sample_text")
 def sample():

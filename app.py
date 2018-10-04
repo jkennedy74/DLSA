@@ -46,14 +46,14 @@ def corpus():
         filepath = os.path.join('data','text', 'seuss.txt')
         modelname = os.path.join('data', 'weights', 'checkpoint-22-0.8293-seuss.hdf5')
     if option == 'option2':
-        filepath = os.path.join('data','text', 'trumpsmall.txt')
-        modelname = os.path.join('data', 'weights', 'checkpoint-16-1.4427-trumpsmall.hdf5')
+        filepath = os.path.join('data','text', 'trump.txt')
+        modelname = os.path.join('data', 'weights', 'checkpoint-10-1.6465-trump.hdf5')
     if option == 'option3':
         filepath = os.path.join('data','text', 'illiad.txt')
         modelname = os.path.join('data', 'weights', 'checkpoint-19-1.3924-illiad.hdf5')
     if option == 'option4':
         filepath = os.path.join('data','text', 'timemachine.txt')
-        modelname = os.path.join('data', 'weights', 'checkpoint--49-1.4686-timemachine.hdf5')
+        modelname = os.path.join('data', 'weights', 'checkpoint-49-1.4686-timemachine.hdf5')
 
     k.clear_session()
 

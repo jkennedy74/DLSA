@@ -13,6 +13,7 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
@@ -64,9 +65,7 @@
 
 
                     <div class="col-lg-12 my-auto">
-                        <div class="section-heading text-center">
-                            <h1>Recurrent Neural Networks (RNNs)</h1>
-                        </div>
+                        <h1 class="text-center">Recurrent Neural Networks (RNNs)</h1>
                         <div class="row">
 
                             <div class="col-md-12">
@@ -96,6 +95,13 @@
                             <div class="col-md-12">
                                 <img src="../static/img/RNNs and LSTM/2 - RNN-unrolled.png" alt="Needs a Name" width="1000px">
                             </div>
+
+                            <div class="col-md-12">
+                                <figcaption class="figure-caption text-white text-right">RNN and Unrolled RNN</figcaption>
+
+                            </div>
+
+
                         </div>
                     </div>
 
@@ -133,13 +139,17 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <img src="../static/img/RNNs and LSTM/5 - LSTM3-SimpleRNN.png" alt="Needs a Name" width="1000px">
+                            <img src="../static/img/RNNs and LSTM/5 - LSTM3-SimpleRNN.png" alt="Simple LSTM RNN" width="1000px">
+                            <figcaption class="figure-caption text-white text-right">Simple LSTM RNN</figcaption>
+
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-12">
-                            <img src="../static/img/RNNs and LSTM/6 - LSTM3-chain.png" alt="Needs a Name" width="1000px">
+                            <img src="../static/img/RNNs and LSTM/6 - LSTM3-chain.png" alt="LSTM Chain" width="1000px">
+                            <figcaption class="figure-caption text-white text-right">LSTM Chain</figcaption>
+
                         </div>
                     </div>
 
@@ -226,7 +236,35 @@
         </div>
     </section>
 
-    <section class="features " id="data">
+    <section class="features " id="coreNLP">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h1>Stanford CoreNLP Sentiments</h1>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="absolute_sentiment_corpus.html"></iframe>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="rel_sentiment_corpus.html"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                    <div class="col">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="sentiment_trace_corpus.html"></iframe>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section class="download bg-primary " id="data">
         <div class="container">
             <div class="section-heading text-center">
                 <h1>Explore the Data</h1>
@@ -247,13 +285,13 @@
     <!-- End Color Blocked Sections -->
 
     <!-- Bottom Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-primary text-info fixed-bottom">
+    <nav class="navbar navbar-expand-lg navbar-primary text-info bg-dark fixed-bottom">
         <a class="navbar-brand" href="#">Resources</a>
 
         <div class="collapse navbar-collapse" id="navbarColor03">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/jkennedy74/DLSA">Project Repository</a>
+                    <a class="nav-link" href="https://github.com/jkennedy74/DLSA" target="blank">Project Repository</a>
                 </li>
             </ul>
             <div class="btn-group dropup">
@@ -268,7 +306,7 @@
                     <a class="dropdown-item" href="https://keras.io/" target="blank">Keras</a>
                     <a class="dropdown-item" href="https://stanfordnlp.github.io/CoreNLP/api.html" target="blank">Stanford
                         CoreNLP</a>
-                    <a class="dropdown-item" href="https://flask-mysqldb.readthedocs.io/en/latest/" target="blank">Flask-MySQLdb</a>
+                    <a class="dropdown-item" href="https://github.com/cjhutto/vaderSentiment" target="blank">VaderSentiment</a>
                     <a class="dropdown-item" href="https://github.com/bear/python-twitter" target="blank">Python-Twitter</a>
                 </div>
             </div>
@@ -283,6 +321,10 @@
                     <a class="dropdown-item" href="https://www.gutenberg.org/" target="blank">Project Gutenburg</a>
                 </div>
             </div>
+
+            <span class="navbar-text text-white">&copy; Brian Schwierzke, Juliana Kennedy, Phil Silberman, Michael
+                Stewart 2018. All Rights Reserved.
+            </span>
 
         </div>
     </nav>
@@ -310,11 +352,10 @@
                                 <input type="radio" class="form-check-input" name="optionsRadios" id="TimeMachine"
                                     value="option4">HG Wells</input><br>
                             </ul>
-                            <div class="btn-group" role="group" aria-label="Basic example">
 
-                                <input type="reset" class=" btn-dark" value="Reset"></input>
-                                <input type="submit" class="btn-dark" value="Select Corpus"></input>
-                            </div>
+                            <input type="reset" class="btn-dark" value="Reset"></input>
+                            <input type="submit" class="btn-dark" value="Select Corpus"></input>
+
                         </fieldset>
                 </div>
                 </form>
@@ -323,13 +364,6 @@
     </div>
     <!-- End Modal -->
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; Brian Schwierzke, Juliana Kennedy, Phil Silberman, Michael Stewart 2018. All Rights Reserved.</p>
-        </div>
-    </footer>
-    <!-- End Footer -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

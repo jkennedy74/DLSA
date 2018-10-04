@@ -95,7 +95,6 @@
                             <div class="col-md-12">
                                 <img src="../static/img/RNNs and LSTM/2 - RNN-unrolled.png" alt="Needs a Name" width="1000px">
                             </div>
-
                             <div class="col-md-12">
                                 <figcaption class="figure-caption text-white text-right">RNN and Unrolled RNN</figcaption>
 
@@ -132,7 +131,6 @@
                                     the repeating module has a different structure. Instead of having a single neural
                                     network layer, there are four</li>
                             </ul>
-                            <br>
 
                         </div>
 
@@ -204,14 +202,7 @@
                 <h1>Sentiment Analysis</h1>
             </div>
 
-            <div class="col-lg-4 my-auto">
 
-                <div class="header-content mx-auto">
-                    <div id="scatter">
-                        <!-- We append our chart here. -->
-                    </div>
-                </div>
-            </div>
             <div class="col my-auto">
                 <div class="card  bg-transparent mb-3">
                     <div class="card-header">CORPUS SENTIMENT</div>
@@ -236,148 +227,137 @@
         </div>
     </section>
 
-    <section class="features " id="coreNLP">
+    <section class="features " id="data">
         <div class="container">
             <div class="section-heading text-center">
                 <h1>Stanford CoreNLP Sentiments</h1>
             </div>
             <div class="row">
                 <div class="col">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="absolute_sentiment_corpus.html"></iframe>
-                    </div>
+                    <div class="embed-responsive embed-responsive-4by3">
+                        <iframe src="//plot.ly/~jkennedy1974/70.embed"></iframe> </div>
                 </div>
                 <div class="col">
+                    <div class="embed-responsive embed-responsive-4by3">
+                        <iframe src="//plot.ly/~jkennedy1974/74.embed"></iframe> </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="rel_sentiment_corpus.html"></iframe>
-                    </div>
-                </div>
-            </div>
+                        <iframe " src="//plot.ly/~jkennedy1974/72.embed"> </iframe> </div> </div> </div> </div>
+                            </section> <!-- End Color Blocked Sections -->
 
-            <div class="row">
-                    <div class="col">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="sentiment_trace_corpus.html"></iframe>
-                        </div>
-                    </div>
-                </div>
-        </div>
-    </section>
+                            <!-- Bottom Navbar -->
+                            <nav class="navbar navbar-expand-lg navbar-primary text-info bg-dark fixed-bottom">
+                                <a class="navbar-brand" href="#">Resources</a>
 
-    <section class="download bg-primary " id="data">
-        <div class="container">
-            <div class="section-heading text-center">
-                <h1>Explore the Data</h1>
-            </div>
-            <div class="row">
+                                <div class="collapse navbar-collapse" id="navbarColor03">
+                                    <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="https://github.com/jkennedy74/DLSA" target="blank">Project
+                                                Repository</a>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            JS and Python Libraries
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-item-text text-dark">JavaScript</div>
+                                            <div class="dropdown-divider"></div>
+                                            <div class="dropdown-item-text text-dark">Python</div>
+                                            <a class="dropdown-item" href="https://keras.io/" target="blank">Keras</a>
+                                            <a class="dropdown-item" href="https://stanfordnlp.github.io/CoreNLP/api.html"
+                                                target="blank">Stanford
+                                                CoreNLP</a>
+                                            <a class="dropdown-item" href="https://github.com/cjhutto/vaderSentiment"
+                                                target="blank">VaderSentiment</a>
+                                            <a class="dropdown-item" href="https://github.com/bear/python-twitter"
+                                                target="blank">Python-Twitter</a>
+                                        </div>
+                                    </div>
 
+                                    <div class="btn-group dropup">
+                                        <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            Data Sources
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="http://twitter.com" target="blank">Twitter</a>
+                                            <a class="dropdown-item" href="https://www.gutenberg.org/" target="blank">Project
+                                                Gutenburg</a>
+                                        </div>
+                                    </div>
 
-                <!-- Embed Tableau -->
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://public.tableau.com/shared/KJRQGK7Y4?:display_count=no&:showVizHome=no"
-                        allowfullscreen></iframe>
-                </div>
-                <!-- End Embed Tableau -->
+                                    <span class="navbar-text text-white">&copy; Brian Schwierzke, Juliana Kennedy, Phil
+                                        Silberman, Michael
+                                        Stewart 2018. All Rights Reserved.
+                                    </span>
 
-            </div>
-        </div>
-    </section>
-    <!-- End Color Blocked Sections -->
+                                </div>
+                            </nav>
+                            <!-- End Bottom Navbar -->
 
-    <!-- Bottom Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-primary text-info bg-dark fixed-bottom">
-        <a class="navbar-brand" href="#">Resources</a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="ModelModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-primary">
+                                            <h5 class="modal-title " id="ModalLable">Select a Corpus</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-dialog">Select a corpus, load the prediction, and analyze the
+                                            sentiment.</div>
+                                        <div class="modal-body">
+                                            <form name="myForm" action="/corpus" method="post">
+                                                <fieldset class="form-group">
+                                                    <ul>
+                                                        <input type="radio" class="form-check-input" name="optionsRadios"
+                                                            id="Seuss" value="option1">Dr.
+                                                        Seuss</input><br>
+                                                        <input type="radio" class="form-check-input" name="optionsRadios"
+                                                            id="POTUS" value="option2">POTUS</input><br>
+                                                        <input type="radio" class="form-check-input" name="optionsRadios"
+                                                            id="Illiad" value="option3">Homer</input><br>
+                                                        <input type="radio" class="form-check-input" name="optionsRadios"
+                                                            id="TimeMachine" value="option4">HG Wells</input><br>
+                                                    </ul>
 
-        <div class="collapse navbar-collapse" id="navbarColor03">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/jkennedy74/DLSA" target="blank">Project Repository</a>
-                </li>
-            </ul>
-            <div class="btn-group dropup">
-                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    JS and Python Libraries
-                </button>
-                <div class="dropdown-menu">
-                    <div class="dropdown-item-text text-dark">JavaScript</div>
-                    <div class="dropdown-divider"></div>
-                    <div class="dropdown-item-text text-dark">Python</div>
-                    <a class="dropdown-item" href="https://keras.io/" target="blank">Keras</a>
-                    <a class="dropdown-item" href="https://stanfordnlp.github.io/CoreNLP/api.html" target="blank">Stanford
-                        CoreNLP</a>
-                    <a class="dropdown-item" href="https://github.com/cjhutto/vaderSentiment" target="blank">VaderSentiment</a>
-                    <a class="dropdown-item" href="https://github.com/bear/python-twitter" target="blank">Python-Twitter</a>
-                </div>
-            </div>
+                                                    <input type="reset" class="btn-dark" value="Reset"></input>
+                                                    <input type="submit" class="btn-dark" value="Select Corpus"></input>
 
-            <div class="btn-group dropup">
-                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    Data Sources
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="http://twitter.com" target="blank">Twitter</a>
-                    <a class="dropdown-item" href="https://www.gutenberg.org/" target="blank">Project Gutenburg</a>
-                </div>
-            </div>
-
-            <span class="navbar-text text-white">&copy; Brian Schwierzke, Juliana Kennedy, Phil Silberman, Michael
-                Stewart 2018. All Rights Reserved.
-            </span>
-
-        </div>
-    </nav>
-    <!-- End Bottom Navbar -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="ModelModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-primary">
-                    <h5 class="modal-title " id="ModalLable">Select a Corpus</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-dialog">Select a corpus, load the prediction, and analyze the sentiment.</div>
-                <div class="modal-body">
-                    <form name="myForm" action="/corpus" method="post">
-                        <fieldset class="form-group">
-                            <ul>
-                                <input type="radio" class="form-check-input" name="optionsRadios" id="Seuss" value="option1">Dr.
-                                Seuss</input><br>
-                                <input type="radio" class="form-check-input" name="optionsRadios" id="POTUS" value="option2">POTUS</input><br>
-                                <input type="radio" class="form-check-input" name="optionsRadios" id="Illiad" value="option3">Homer</input><br>
-                                <input type="radio" class="form-check-input" name="optionsRadios" id="TimeMachine"
-                                    value="option4">HG Wells</input><br>
-                            </ul>
-
-                            <input type="reset" class="btn-dark" value="Reset"></input>
-                            <input type="submit" class="btn-dark" value="Select Corpus"></input>
-
-                        </fieldset>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- End Modal -->
+                                                </fieldset>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Modal -->
 
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+                            <!-- Bootstrap core JavaScript -->
+                            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                                crossorigin="anonymous"></script>
+                            <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                                crossorigin="anonymous"></script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                                crossorigin="anonymous"></script>
+                            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+                                integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+                                crossorigin="anonymous"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+                            <!-- Plugin JavaScript -->
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
-    <script src="../static/js/main.min.js"></script>
-    <script src="../static/js/app.js"></script>
+                            <script src="../static/js/main.min.js"></script>
+                            <script src="../static/js/app.js"></script>
 
 
 </body>

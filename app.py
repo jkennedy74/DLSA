@@ -25,6 +25,8 @@ sample_text = []
 raw_sentiment = []
 pred_sentiment = []
 
+c = 0
+
 @app.route("/")
 def index():
 
@@ -48,7 +50,7 @@ def corpus():
         modelname = os.path.join('data', 'weights', 'checkpoint-03-1.8313-trumpsmall.hdf5')
     if option == 'option3':
         filepath = os.path.join('data','text', 'illiad.txt')
-        modelname = os.path.join('data', 'weights', 'needacheckpointfile.hdf5')
+        modelname = os.path.join('data', 'weights', 'checkpoint-19-1.3924-illiad.hdf5')
     if option == 'option4':
         filepath = os.path.join('data','text', 'timemachine.txt')
         modelname = os.path.join('data', 'weights', 'checkpoint--49-1.4686-timemachine.hdf5')
@@ -99,11 +101,20 @@ def corpus():
     model.load_weights(filename)
     model.compile(loss='categorical_crossentropy', optimizer='adam')
 
+    seed_char = []
+
     # pick a random seed
     start = numpy.random.randint(0, len(dataX)-1)
     pattern = dataX[start]
     for value in pattern:
-        seed.append(int_to_char[value])
+        seed_char.append(int_to_char[value])
+
+    if seed:
+        seed[0] = ''.join(seed_char)
+    if not seed:
+        seed.append(''.join(seed_char))
+
+    pred_char = []
 
     for i in range(280):
         x = numpy.reshape(pattern, (1, len(pattern), 1))
@@ -113,12 +124,16 @@ def corpus():
         index = numpy.random.choice(len(bob), p=bob)
         # index = numpy.argmax(prediction)
         result = int_to_char[index]
-        predicted_text.append(result)
+        pred_char.append(result)
         # sys.stdout.write(result)
         pattern.append(index)
         pattern = pattern[1:len(pattern)]
     print ("\nDone.")
 
+    if predicted_text:
+        predicted_text[0] = ''.join(pred_char)
+    if not predicted_text:
+        predicted_text.append(''.join(pred_char))
     
     raw_start = numpy.random.randint(0, n_chars-280)
     raw_end = raw_start + 280
@@ -127,10 +142,21 @@ def corpus():
 
     result1 = analyzer.polarity_scores(raw_sent)
     result2 = analyzer.polarity_scores(pred_sent)
+    
+    if sample_text:
+        sample_text[0] = raw_sent
+    if not sample_text:
+        sample_text.append(raw_sent)
 
-    sample_text.append(raw_sent)
-    raw_sentiment.append(result1)
-    pred_sentiment.append(result2)
+    if raw_sentiment:
+        raw_sentiment[0] = result1
+    if not raw_sentiment:
+        raw_sentiment.append(result1)
+
+    if pred_sentiment:
+        pred_sentiment[0] = result2
+    if not pred_sentiment:
+        pred_sentiment.append(result2)
 
     return redirect('/#modelExploration')
 
@@ -142,12 +168,12 @@ def sample():
 @app.route("/lstm_output")
 def rnn():
 
-    return jsonify(''.join(predicted_text))
+    return jsonify(predicted_text)
 
 @app.route("/seed")
 def rand_seed():
 
-    return jsonify(''.join(seed))
+    return jsonify(seed)
 
 @app.route("/raw_result")
 def seeds():

@@ -24,21 +24,21 @@ function predictReturn() {
 
   d3.json(seed_url).then(function(data) {
 
-    console.log(data);
+    console.log(data[0]);
 
     var modelSeed = d3.select("#modelSeed");
     modelSeed.html("");
-    modelSeed.text(data);
+    modelSeed.text(data[0]);
 
   });
 
   d3.json(predText_url).then(function(data) {
 
-    console.log(data);
+    console.log(data[0]);
 
     var predictedText = d3.select("#predictedText");
     predictedText.html("");
-    predictedText.text(data);
+    predictedText.text(data[0]);
   });
 }
 

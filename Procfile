@@ -1,4 +1,4 @@
-web: gunicorn app:app --preload--
+web: gunicorn app:app --preload
 workers: 5
 worker_class: eventlet
 threads: 2

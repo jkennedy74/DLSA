@@ -74,7 +74,7 @@
                                     <li>Useful with sequential data because each neuron uses its internal memory to
                                         maintain information about the
                                         previous input.</li>
-                                    <li>Can be thought of as multiple copies of the same network each passign a message
+                                    <li>Can be thought of as multiple copies of the same network each passing a message
                                         to its successor.</li>
                                     <li>Common applications include speech recognition, language modeling, translation
                                         and image captioning.</li>
@@ -93,7 +93,7 @@
 
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="../static/img/RNNs and LSTM/2 - RNN-unrolled.png" alt="Needs a Name" width="1000px">
+                                <img src="../static/img/RNNs and LSTM/2 - RNN-unrolled.png" alt="RNN Unrolled" width="1000px">
                             </div>
                             <div class="col-md-12">
                                 <figcaption class="figure-caption text-white text-right">RNN and Unrolled RNN</figcaption>
@@ -205,21 +205,26 @@
 
             <div class="col my-auto">
                 <div class="card  bg-transparent mb-3">
-                    <div class="card-header">CORPUS SENTIMENT</div>
+                    <div class="card-header">CORPUS AVERAGE SENTIMENT</div>
                     <div class="card-body">
                         <!-- We append our random seed here. -->
                         <p class="card-text" id="modelSentiment"></p>
                     </div>
                 </div>
-                <div class="card  bg-transparent mb-3">
+                <div class="card  bg-light mb-3">
+                    <div class="card-header">PREDICTED AVERAGE SENTIMENT</div>
+                    <div class="card-body">
+                        <!-- We append our random seed here. -->
+                        <p class="card-text" id="predAvgSentiment"></p>
+                    </div>
+                </div>
+                <div class="card  bg-light mb-3">
                     <div class="card-header">PREDICTION SENTIMENT</div>
                     <div class="card-body">
                         <!-- We append our random seed here. -->
                         <p class="card-text" id="predictSentiment"></p>
                     </div>
                     <button id="sentiment" type="submit" class="btn-dark">Analyze</button>
-
-
 
                 </div>
 
@@ -246,8 +251,8 @@
             <div class="row">
                 <div class="col">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe " src="//plot.ly/~jkennedy1974/72.embed"> </iframe> </div> </div> </div> </div>
-                            </section> <!-- End Color Blocked Sections -->
+                        <iframe " src="//plot.ly/~jkennedy1974/72.embed"> </iframe> </div> </div> </div> </div> </section>
+                            <!-- End Color Blocked Sections -->
 
                             <!-- Bottom Navbar -->
                             <nav class="navbar navbar-expand-lg navbar-primary text-info bg-dark fixed-bottom">

@@ -48,7 +48,7 @@ def corpus():
         modelname = os.path.join('data', 'weights', 'checkpoint-03-1.8313-trumpsmall.hdf5')
     if option == 'option3':
         filepath = os.path.join('data','text', 'illiad.txt')
-        modelname = os.path.join('data', 'weights', 'needacheckpointfile.hdf5')
+        modelname = os.path.join('data', 'weights', 'checkpoint-19-1.3924-illiad.hdf5')
     if option == 'option4':
         filepath = os.path.join('data','text', 'timemachine.txt')
         modelname = os.path.join('data', 'weights', 'checkpoint--49-1.4686-timemachine.hdf5')

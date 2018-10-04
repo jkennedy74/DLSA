@@ -24,8 +24,7 @@ seed = []
 sample_text = []
 raw_sentiment = []
 pred_sentiment = []
-
-c = 0
+predsample_sentiment = []
 
 @app.route("/")
 def index():
@@ -45,15 +44,23 @@ def corpus():
     if option == 'option1':
         filepath = os.path.join('data','text', 'seuss.txt')
         modelname = os.path.join('data', 'weights', 'checkpoint-22-0.8293-seuss.hdf5')
+        modelsent = {'Compound': 0.0555, 'Negative': 0.8616, 'Neutral': 0.0706, 'Positive': 0.0677}
+        predictedsent = {'Compound': -0.4367, 'Negative': 0.9306, 'Neutral': 0.0335, 'Positive': 0.0359}
     if option == 'option2':
         filepath = os.path.join('data','text', 'trump.txt')
         modelname = os.path.join('data', 'weights', 'checkpoint-10-1.6465-trump.hdf5')
+        modelsent = {'Compound': 0.4328, 'Negative': 0.7174, 'Neutral': 0.088, 'Positive': 0.1946}
+        predictedsent = {'Compound': 0.9457, 'Negative': 0.8913, 'Neutral': 0.0267, 'Positive': 0.0819}
     if option == 'option3':
         filepath = os.path.join('data','text', 'illiad.txt')
         modelname = os.path.join('data', 'weights', 'checkpoint-19-1.3924-illiad.hdf5')
+        modelsent = {'Compound': -0.0689, 'Negative': 0.841, 'Neutral': 0.0888, 'Positive': 0.0701}
+        predictedsent = {'Compound': -0.8295, 'Negative': 0.9588, 'Neutral': 0.0292, 'Positive': 0.0121}
     if option == 'option4':
         filepath = os.path.join('data','text', 'timemachine.txt')
-        modelname = os.path.join('data', 'weights', 'checkpoint-49-1.4686-timemachine.hdf5')
+        modelname = os.path.join('data', 'weights', 'checkpoint--49-1.4686-timemachine.hdf5')
+        modelsent = {'Compound': 0.0493, 'Negative': 0.8207, 'Neutral': 0.0859, 'Positive': 0.0933}
+        predictedsent = {'Compound': 0.7397, 'Negative': 0.9642, 'Neutral': 0.0086, 'Positive': 0.0271}
 
     k.clear_session()
 
@@ -140,7 +147,6 @@ def corpus():
     raw_sent = raw_text[raw_start:raw_end]
     pred_sent = ''.join(predicted_text)
 
-    result1 = analyzer.polarity_scores(raw_sent)
     result2 = analyzer.polarity_scores(pred_sent)
     
     if sample_text:
@@ -149,9 +155,14 @@ def corpus():
         sample_text.append(raw_sent)
 
     if raw_sentiment:
-        raw_sentiment[0] = result1
+        raw_sentiment[0] = modelsent
     if not raw_sentiment:
-        raw_sentiment.append(result1)
+        raw_sentiment.append(modelsent)
+
+    if predsample_sentiment:
+        predsample_sentiment[0] = predictedsent
+    if not predsample_sentiment:
+        predsample_sentiment.append(predictedsent)
 
     if pred_sentiment:
         pred_sentiment[0] = result2
@@ -176,9 +187,14 @@ def rand_seed():
     return jsonify(seed)
 
 @app.route("/raw_result")
-def seeds():
+def raw_result():
 
     return jsonify(raw_sentiment)
+
+@app.route("/predsample_result")
+def predsample_result():
+
+    return jsonify(predsample_sentiment)
 
 @app.route("/pred_result")
 def preds():

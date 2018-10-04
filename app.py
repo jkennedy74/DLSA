@@ -47,7 +47,7 @@ def corpus():
         modelname = os.path.join('data', 'weights', 'checkpoint-22-0.8293-seuss.hdf5')
     if option == 'option2':
         filepath = os.path.join('data','text', 'trumpsmall.txt')
-        modelname = os.path.join('data', 'weights', 'checkpoint-03-1.8313-trumpsmall.hdf5')
+        modelname = os.path.join('data', 'weights', 'checkpoint-16-1.4427-trumpsmall.hdf5')
     if option == 'option3':
         filepath = os.path.join('data','text', 'illiad.txt')
         modelname = os.path.join('data', 'weights', 'checkpoint-19-1.3924-illiad.hdf5')

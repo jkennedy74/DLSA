@@ -15,3 +15,4 @@ Keras==2.2.2
 Keras-Preprocessing==1.0.2
 vaderSentiment==3.2.1
 stanfordcorenlp==3.9.1.1
+eventlet==0.24.1

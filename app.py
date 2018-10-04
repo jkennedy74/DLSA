@@ -58,7 +58,7 @@ def corpus():
         predictedsent = {'Compound': -0.8295, 'Negative': 0.9588, 'Neutral': 0.0292, 'Positive': 0.0121}
     if option == 'option4':
         filepath = os.path.join('data','text', 'timemachine.txt')
-        modelname = os.path.join('data', 'weights', 'checkpoint--49-1.4686-timemachine.hdf5')
+        modelname = os.path.join('data', 'weights', 'checkpoint-49-1.4686-timemachine.hdf5')
         modelsent = {'Compound': 0.0493, 'Negative': 0.8207, 'Neutral': 0.0859, 'Positive': 0.0933}
         predictedsent = {'Compound': 0.7397, 'Negative': 0.9642, 'Neutral': 0.0086, 'Positive': 0.0271}
 

@@ -4,4 +4,4 @@ worker_class: eventlet
 threads: 1
 worker_connections: 10
 timeout: 90
-graceful-timeout: 30
+graceful-timeout: 90

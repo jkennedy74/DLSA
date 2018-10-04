@@ -150,17 +150,21 @@
 
                         </div>
 
-                        <div class="card text-dark bg-light" style="max-width: 100pc;">
-                            <div class="card-header">Define LSTM Network</div>
-                            <div class="card-body">
-                              <code>   model = Sequential()
-                                model.add(LSTM(256, input_shape=(X.shape[1], X.shape[2]), return_sequences=True))
-                                model.add(Dropout(0.2))
-                                model.add(LSTM(256))
-                                model.add(Dropout(0.2))
-                                model.add(Dense(y.shape[1], activation='softmax'))</code>
-                            </div>
+
                           </div>
+                          <br>
+
+                          <div class="card text-dark bg-light" style="max-width: 100pc;">
+                            <div class="card-header">DEFINE LSTM NETWORK</div>
+                            <div class="card-body">
+                              <code>   model = Sequential()<br>
+                                model.add(LSTM(256, input_shape=(X.shape[1], X.shape[2]), return_sequences=True))<br>
+                                model.add(Dropout(0.2))<br>
+                                model.add(LSTM(256))<br>
+                                model.add(Dropout(0.2))<br>
+                                model.add(Dense(y.shape[1], activation='softmax'))<br>
+                            </code>
+                            </div>
                     </div>
 
 
@@ -176,6 +180,29 @@
             <div class="section-heading text-center">
                 <h1>Model Predictions</h1>
             </div>
+            <div class="card text-dark bg-light" style="max-width: 100pc;">
+                <div class="card-header">TRAVERSING A LARGE CORPUS</div>
+                <div class="card-body">
+                  <code>   
+                    pred_char = []<br>
+
+                    for i in range(280):<br>
+                        &emsp;&emsp;&emsp;x = numpy.reshape(pattern, (1, len(pattern), 1))<br>
+                        &emsp;&emsp;&emsp;x = x / float(n_vocab)<br>
+                        &emsp;&emsp;&emsp;prediction = model.predict(x, verbose=0)<br>
+                        &emsp;&emsp;&emsp;bob = prediction[0]<br>
+                        &emsp;&emsp;&emsp;index = numpy.random.choice(len(bob), p=bob)<br>
+                        # index = numpy.argmax(prediction)<br>
+                        &emsp;&emsp;&emsp;result = int_to_char[index]<br>
+                        &emsp;&emsp;&emsp;pred_char.append(result)<br>
+                        # sys.stdout.write(result)<br>
+                        &emsp;&emsp;&emsp;pattern.append(index)<br>
+                        &emsp;&emsp;&emsp;pattern = pattern[1:len(pattern)]<br>
+                  </code>
+                </div>
+              </div>
+              <br>
+
             <div class="row">
                 <div class="col-lg-12 my-auto">
                     <div class="card  bg-transparent mb-3">
@@ -284,6 +311,8 @@
                                         </button>
                                         <div class="dropdown-menu">
                                             <div class="dropdown-item-text text-dark">JavaScript</div>
+                                            <a class="dropdown-item" href="https://d3js.org/" target="blank">D3.js</a>
+                                            <a class="dropdown-item" href="https://plot.ly/javascript/" target="blank">Plotly</a>
                                             <div class="dropdown-divider"></div>
                                             <div class="dropdown-item-text text-dark">Python</div>
                                             <a class="dropdown-item" href="https://keras.io/" target="blank">Keras</a>

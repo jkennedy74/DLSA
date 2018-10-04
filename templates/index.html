@@ -11,7 +11,8 @@
     <title>Deep Learning and Sentiment Analysis</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
@@ -26,25 +27,29 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">Deep Learning and Sentiment Analysis</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#project">Project Description</a>
+                        <a class="nav-link js-scroll-trigger" href="#RNNs">RNNs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#ModelModal">Pretrained Models</a>
+                        <a class="nav-link js-scroll-trigger" href="#LSTMs">LSTMs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#concepts">Deep Learning</a>
+                        <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#ModelModal">Pretrained
+                            Models</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#models">Sentiment Analysis</a>
+                        <a class="nav-link js-scroll-trigger" href="#modelExploration">Model Exploration</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#data">Data Exploration</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -52,33 +57,52 @@
     <!-- End Navigation -->
 
     <!-- Header -->
-    <header class="masthead" id="project">
+    <header class="masthead" id="RNNs">
         <div class="container h-100">
             <div class="row h-100">
-                <div class="col-lg-8 my-auto">
-                    <div class="header-content mx-auto">
-                        <h3>Sample Text</h3>
-                        <p id="sampleText">Load a model</p>
-                        <h3>Model Seed</h3>
-                        <p id="modelSeed">Load a model</p>
-                        <h3>Predicted Text</h3>
-                        <p id="predictedText">Load a model</p>
-                    </div>
-                    <button id="predict" type="submit" class="btn btn-primary">Predict</button>    
-                </div>
-                <div class="col-lg-4 my-auto">
-                    <div class="header-content mx-auto">
-                        <h3>Model Sentiment</h3>
-                        <div id="modelSentiment">
-                            <p>Load a model</p>
+                <div class="row">
+   
+
+                    <div class="col-lg-12 my-auto">
+                            <div class="section-heading text-center">
+                                    <h1>Recurrent Neural Networks (RNNs)</h1>
+                                </div>
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <ul>
+                                    <li>Useful with sequential data because each neuron uses its internal memory to
+                                        maintain information about the
+                                        previous input.</li>
+                                    <li>Can be thought of as multiple copies of the same network each passign a message
+                                        to its successor.</li>
+                                    <li>Common applications include speech recognition, language modeling, translation
+                                        and image captioning.</li>
+                                    <li>RNNs are limited in how they handle long-term dependencies</li>
+                                    <ul>
+                                        <li>Learn using past information if the gap between the relevant information
+                                            and the place it is needed is small.</li>
+                                        <li>If this gap is large, RNNs become unable to learn how to connect the
+                                            information</li>
+
+                                    </ul>
+                                </ul>
+
+                            </div>
                         </div>
-                        <h3>Predicted Sentiment</h3>
-                        <div id="predictSentiment">
-                            <p>Load a model</p>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="../static/img/RNNs and LSTM/2 - RNN-unrolled.png" alt="Needs a Name" width="1000px">
+                            </div>
                         </div>
                     </div>
-                    <button id="sentiment" type="submit" class="btn btn-primary">Sentiment</button>
+
+
+
                 </div>
+
             </div>
         </div>
         </div>
@@ -86,32 +110,143 @@
     <!-- End Header -->
 
     <!-- Color Blocked Sections -->
-    <section class="download bg-primary text-center" id="concepts">
+    <section class="download bg-primary" id="LSTMs">
         <div class="container">
+            <div class="section-heading text-center">
+                <h3>Long Short-Term Memory Networks (LSTMs)</h3>
+            </div>
             <div class="row">
-                <div class="col-md-8 mx-auto">
-                    <h3>LSTM Networks</h3> Recurrent Neural Networks (RNNs) are useful with sequential data because each neuron or unit can use its internal memory to maintain information about the previous input. This is important to note because reading through a sentence even as a human, you’re picking up the context of each word from the words before it. A recurrent neural network can be thought of as multiple copies of the same network, each passing a message to a successor. RNNs to a variety of problems: speech recognition, language modeling, translation, image captioning… The problem with RNNs is how they handle long-term dependencies. If the gap between the relevant information and the place that it’s needed is small, RNNs can learn to use the past information. However as the gap between the relevant information and the point that it is needed grows, RNNs become unable to learn to connect the information. Long Short Term Memory networks (LSTMs) are a special kind of RNN capable of learning long-term dependencies. All RNNs have a chain like structure. LSTMs do as well but the repeating module has a different structure. Instead of having a single neural network layer, there are four
 
+                <div class="col-lg-12 my-auto">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul>
+                                <li>LSTMs are RNNs that are capable of learning long-term dependencies.</li>
+                                <li> All RNNs have a chain like structure. LSTMs do as well but
+                                    the repeating module has a different structure. Instead of having a single neural
+                                    network layer, there are four</li>
+                            </ul>
+                            <br>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="../static/img/RNNs and LSTM/5 - LSTM3-SimpleRNN.png" alt="Needs a Name" width="1000px">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="../static/img/RNNs and LSTM/6 - LSTM3-chain.png" alt="Needs a Name" width="1000px">
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="modelExploration">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h3>Model Predictions</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 my-auto">
+                    <div class="card  bg-transparent mb-3">
+                        <div class="card-header">SAMPLE FROM CORPUS</div>
+                        <div class="card-body">
+                            <!-- We append our sample text here. -->
+                            <p class="card-text" id="sampleText"></p>
+                        </div>
+                    </div>
+
+                    <div class="card  bg-transparent mb-3">
+                        <div class="card-header">RANDOM SEED</div>
+                        <div class="card-body">
+                            <!-- We append our random seed here. -->
+                            <p class="card-text" id="modelSeed"></p>
+                        </div>
+                    </div>
+
+                    <div class="card text-white bg-primary mb-3">
+                        <div class="card-header">PREDICTED TEXT</div>
+                        <div class="card-body">
+                            <!-- We append our prediction here. -->
+                            <p class="card-text" id="predictedText"></p>
+                        </div>
+                        <button id="predict" type="submit" class="btn-dark">Load Prediction</button>    
+
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="features" id="models">
+    <section class="download bg-primary" id="models">
         <div class="container">
             <div class="section-heading text-center">
                 <h3>Sentiment Analysis</h3>
-                <p class="text-muted">Long Short-Term Memory and Recursive Neural Network!</p>
-                <p class="text-muted">Why did we use these!</p>
+            </div>
 
-                <hr>
+            <div class="col-lg-4 my-auto">
+
+                <div class="header-content mx-auto">
+                    <div id="scatter">
+                        <!-- We append our chart here. -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 my-auto">
+                <div class="card text-white bg-transparent mb-3">
+                    <div class="card-header">CORPUS SENTIMENT</div>
+                    <div class="card-body">
+                        <!-- We append our random seed here. -->
+                        <p class="card-text" id="modelSentiment"></p>
+                    </div>
+                </div>
+                <div class="card text-white bg-transparent mb-3">
+                    <div class="card-header">PREDICTION SENTIMENT</div>
+                    <div class="card-body">
+                        <!-- We append our random seed here. -->
+                        <p class="card-text" id="predictSentiment"></p>
+                    </div>
+                    <button id="sentiment" type="submit" class="btn-dark">Generate Sentiment</button>
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="features " id="data">
+        <div class="container">
+                <div class="section-heading text-center">
+                        <h3>Explore the Data</h3>
+                    </div>
+            <div class="row">
+
+
+                <!-- Embed Tableau -->
+                <div class="embed-responsive embed-responsive-16by9" > 
+                    <iframe class="embed-responsive-item" src="https://public.tableau.com/shared/KJRQGK7Y4?:display_count=no&:showVizHome=no"
+                        allowfullscreen></iframe>
+                </div>
+                <!-- End Embed Tableau -->
+
             </div>
         </div>
     </section>
     <!-- End Color Blocked Sections -->
 
     <!-- Bottom Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark  fixed-bottom">
+    <nav class="navbar navbar-expand-lg navbar-primary text-info fixed-bottom">
         <a class="navbar-brand" href="#">Resources</a>
 
         <div class="collapse navbar-collapse" id="navbarColor03">
@@ -121,7 +256,8 @@
                 </li>
             </ul>
             <div class="btn-group dropup">
-                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
                     JS and Python Libraries
                 </button>
                 <div class="dropdown-menu">
@@ -129,14 +265,16 @@
                     <div class="dropdown-divider"></div>
                     <div class="dropdown-item-text text-dark">Python</div>
                     <a class="dropdown-item" href="https://keras.io/" target="blank">Keras</a>
-                    <a class="dropdown-item" href="https://stanfordnlp.github.io/CoreNLP/api.html" target="blank">Stanford CoreNLP</a>
+                    <a class="dropdown-item" href="https://stanfordnlp.github.io/CoreNLP/api.html" target="blank">Stanford
+                        CoreNLP</a>
                     <a class="dropdown-item" href="https://flask-mysqldb.readthedocs.io/en/latest/" target="blank">Flask-MySQLdb</a>
                     <a class="dropdown-item" href="https://github.com/bear/python-twitter" target="blank">Python-Twitter</a>
                 </div>
             </div>
 
             <div class="btn-group dropup">
-                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
                     Data Sources
                 </button>
                 <div class="dropdown-menu">
@@ -151,48 +289,53 @@
 
     <!-- Modal -->
     <div class="modal fade" id="ModelModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="ModalLable">Select a corpus to generate a random seed!</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form name="myForm" action="/corpus" method="post">
-                        <fieldset class="form-group">
-                            <input type="radio" class="form-check-input" name="optionsRadios" id="Seuss" value="option1">Dr. Seuss</input><br>
-                            <input type="radio" class="form-check-input" name="optionsRadios" id="POTUS" value="option2">@RealDonaldTrump</input><br>
-                            <input type="radio" class="form-check-input" name="optionsRadios" id="Illiad" value="option3">Homer</input><br>
-                            <input type="radio" class="form-check-input" name="optionsRadios" id="TimeMachine" value="option4">HG Wells</input><br>
-                            <input type="submit" class="btn-primary btn-lg btn-block" value="Signup"></input>
-                        </fieldset>
-                    </form>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalLable">Select a Corpus</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form name="myForm" action="/corpus" method="post">
+                            <fieldset class="form-group">
+                                <ul>
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="Seuss" value="option1">Dr. Seuss</input><br>
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="POTUS" value="option2">@RealDonaldTrump</input><br>
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="Illiad" value="option3">Homer</input><br>
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="TimeMachine" value="option4">HG Wells</input><br>
+                            </ul>
+                            <input type="reset" class="btn-dark" value="Reset Selection"></input>
+                            <input type="submit" class="btn-dark" value="Select Corpus"></input>
+
+                            </fieldset> </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
         <!-- End Modal -->
 
         <!-- Footer -->
         <footer>
             <div class="container">
-                <p>&copy; Bryan Schwierzke, Juliana Kennedy, Phil Silberman, Michael Stewart 2018. All Rights Reserved.</p>
+                <p>&copy; Brian Schwierzke, Juliana Kennedy, Phil Silberman, Michael Stewart 2018. All Rights Reserved.</p>
             </div>
         </footer>
         <!-- End Footer -->
 
         <!-- Bootstrap core JavaScript -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
 
         <!-- Plugin JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
         <script src="../static/js/main.min.js"></script>
-        <!-- Our JavaScript -->
-        <script type="text/javascript" src="../static/js/app.js"></script>
 
 </body>
 
